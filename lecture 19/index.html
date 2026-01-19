@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity-Cascode</title>
+    <style>
+        body{
+            background-color: rgb(84, 242, 168);
+        }
+        /* This is specificity of the selector is 1 */
+        h1{
+            color: aqua;
+        }
+        /* This is specificity of the selector is 10 */
+        .yellow{
+            color: yellow;
+        }
+        /* This is specificity of the selector is 10 */
+        .cred{
+            color: red;
+        }
+        /* This is specificity of the selector is 1 +10= 11 */
+        h1.cpurple{
+            color: purple;
+        }
+        /* This is an example of arttibute sector. This is specificity of the selector is 1 */
+         [data-x=a]{ 
+            color: yellow;
+        }
+        /* This is specificity of the selector is 1 + 10 + 10 + 10 + 10 = 41*/
+        a.herryclass,rohan-class[href]:hover{
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body><div>
+    <h1 class="yellow  cred cpurple" data-x="a">CSS Specificity</h1>
+</div>
+    
+</body>
+</html>
